@@ -43,7 +43,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
+        System.out.println("Hello World!");
 
 
         /* 4. In Python, we could declare variables using a simple assignment
@@ -62,7 +62,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-
+        int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -99,7 +99,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
-
+        for (int i = 10; i >= 0; i--){
+            System.out.println("Current count: " + i);
+        }
 
     }
 
@@ -141,11 +143,20 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
+        String[] words = to_split.split(" ");
 
-        // Fill in the rest of the body here
+        ret.append(words[0].charAt(0));
+        ret.append(words[1].charAt(0));
+        ret.append(words[2].charAt(0));
+        ret.append(words[3].charAt(0));
+        ret.append(words[4].charAt(0));
+        ret.append(words[5].charAt(0));
+        ret.append(words[6].charAt(0));
+
 
         return ret.toString();
     }
+
 
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
@@ -170,11 +181,17 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        if (arr.length < 2) {
+            return 0;
+        } else {
+            for (int i = 0; i <= arr.length; i++) {
+                current_sum += arr[i];
+                i += 1;
+            }
+            return current_sum;
+        }
 
-        return current_sum;
     }
-
-
     /*
      * TODO (Task 6): Submit the changes you made on GitHub!
      *                When you submit it, go to the 'Actions' tab. You should
