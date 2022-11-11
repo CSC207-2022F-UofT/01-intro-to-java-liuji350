@@ -15,7 +15,7 @@
  *
  *    (Relevant reading: 1.1.1. Defining classes)
  */
-public class Basics {
+public class BasicsCopy {
 
     /**
      *  2. In Python, we could have code in a block labelled:
@@ -101,7 +101,6 @@ public class Basics {
          */
         for (int i = 10; i >= 0; i--){
             System.out.println("Current count: " + i);
-
         }
 
     }
@@ -144,19 +143,18 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-        String[] list = to_split.split(" ");
+        String[] words = to_split.split(" ");
 
-        ret.append(list[0].charAt(0));
-        ret.append(list[1].charAt(0));
-        ret.append(list[2].charAt(0));
-        ret.append(list[3].charAt(0));
-        ret.append(list[4].charAt(0));
-        ret.append(list[5].charAt(0));
-        ret.append(list[6].charAt(0));
+        ret.append(words[0].charAt(0));
+        ret.append(words[1].charAt(0));
+        ret.append(words[2].charAt(0));
+        ret.append(words[3].charAt(0));
+        ret.append(words[4].charAt(0));
+        ret.append(words[5].charAt(0));
+        ret.append(words[6].charAt(0));
+
 
         return ret.toString();
-
-
     }
 
 
@@ -183,17 +181,17 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
-        if (arr.length < 2){
+        if (arr.length < 2) {
             return 0;
-        } else{
-            for (int n = 1; n < arr.length; n++){
-                if (n % 2 > 0){
-                    current_sum += n;
+        } else {
+            for (int i = 1; i < arr.length; i++) {
+                if (i % 2 > 0 ) {
+                    current_sum += arr[i];
+
                 }
             }
+            return current_sum;
         }
-        return current_sum;
-
 
     }
     /*
