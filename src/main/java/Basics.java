@@ -185,10 +185,10 @@ public class Basics {
          */
         if (arr.length < 2){
             return 0;
-        } else{
+        } else {
             for (int n = 1; n < arr.length; n++){
                 if (n % 2 > 0){
-                    current_sum += n;
+                    current_sum += arr[n];
                 }
             }
         }
